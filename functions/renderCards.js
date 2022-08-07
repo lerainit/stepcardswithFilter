@@ -19,6 +19,13 @@ const renderCards = ( )=>{
 //console.log(cardsArr)
 
  cardsArr.then(result =>{ console.log(result)
+
+if(result === []){
+  const titleForBegin =document.createElement('h1')
+  document.querySelector('.container').append( titleForBegin)
+  document.querySelector('h1').innerHTML = 'There is no items added'
+}
+
 result.forEach(el =>{
 
     if(el.doctor === 'cardiologist'){
@@ -33,7 +40,8 @@ result.forEach(el =>{
   const filter = new Filter()
   filter.render('.filter_container2')
   document.querySelector('.filter_container2').addEventListener('input',()=>{
-  
+    const container = document.querySelector('.container')
+  container.innerHTML = ''
   filterCards()
   
   })

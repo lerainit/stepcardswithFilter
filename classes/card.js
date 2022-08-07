@@ -69,7 +69,7 @@ this.createElements()
 
 
 document.querySelector(selector).append(this.cardContainer)
-document.querySelector('h1').innerHTML = ''
+//document.querySelector('h1').innerHTML = ''
 }
     
 }
